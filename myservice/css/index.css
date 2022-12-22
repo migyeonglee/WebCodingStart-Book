@@ -1,9 +1,9 @@
 #signUp {
-    _display: none;
+    display: none;
 }
 
 #introSite {
-    display: none;
+    display: block;
 }
 
 /* common */
@@ -15,6 +15,7 @@
     text-align: center;
 }
 
+/* sign up form  */
 #signUpCenter {
     margin: 0 auto;
 }
@@ -22,7 +23,7 @@
 #signUpForm {
     float: left;
     width: 98%;
-    margin: 40px 0 40px 0;
+    margin: 40px 0;
     padding-top: 1rem;
     border: 1px solid #ccc;
     border-radius: 10px
@@ -32,14 +33,14 @@
     clear: both;
     float: left;
     width: 100%;
-    margin-bottom: 1.5em
+    margin-bottom: 1.5em;
 }
 
 .row label {
     float: left;
     width: 20%;
     padding-left: 5%;
-    font-size: 1.3rem
+    font-size: 1.3rem;
 }
 
 .inputBox {
@@ -56,7 +57,7 @@
     font-size: 1.5rem;
     margin-left: 2%;
     background: #fff;
-    border: none
+    border: none;
 }
 
 .row .selectBox {
@@ -103,7 +104,7 @@
     margin: 0 auto
 }
 
-#gMW {
+#gMM {
     border-left: none
 }
 
@@ -179,7 +180,8 @@
         color: #64cbf9;
     }
 
-    #signUpBtn {
+
+    #signUpBth {
         margin: 10% auto 15%;
         width: 100px;
         height: 30px;
@@ -189,8 +191,88 @@
         border-radius: 1rem;
     }
 
-    #signUpBtn p {
+    #signUpBth p {
         font-size: 1rem;
         color: #fff;
+    }
+
+    #goToLoginBtn {
+        clear: both;
+        width: 30%;
+        height: 30px;
+        padding: 0.4rem;
+        margin: 0 auto 20px;
+        background: #64cbf9;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 10px;
+
+    }
+
+    #goToLoginBtn p {
+        font-size: 1rem;
+        color: #fff;
+        position: relative;
+        top: 5px;
+    }
+
+}
+
+/* desktop css source */
+@media screen and (min-width:1200px) {
+
+    /* container */
+    #loginForm {
+        display: block;
+    }
+
+    #container {
+        float: left;
+        width: 100%;
+        min-height: 100%;
+        background: url('/myservice/images/index/bgImage.jpg');
+        background-size: cover;
+    }
+
+    #siteComment {
+        margin: 2% auto 0;
+        width: 210px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    #introSite {
+        display: block;
+    }
+
+    #signUpBth,
+    #goToLoginBtn {
+        display: none;
+    }
+
+    #signUp {
+        display: block;
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+
+    #signUpCenter {
+        width: 50%;
+    }
+
+    #signUpForm {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .inputBox {
+        height: 40px;
+    }
+
+    .row input {
+        height: 40px;
+    }
+
+    .submitBox {
+        width: 10%;
+        padding: 0.2rem;
     }
 }
