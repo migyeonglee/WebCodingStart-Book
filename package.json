@@ -1,0 +1,23 @@
+{
+  "name": "webcodingstart-book",
+  "version": "1.0.0",
+  "description": "- 웹 코딩 시작하기 책 실습\r - \" 나만의 첫 웹서비스 만들기 \"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migyeonglee/WebCodingStart-Book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migyeonglee/WebCodingStart-Book/issues"
+  },
+  "homepage": "https://github.com/migyeonglee/WebCodingStart-Book#readme",
+  "dependencies": {
+    
+    "node": "^19.3.0"
+  }
+}
