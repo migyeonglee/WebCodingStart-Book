@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,125 +10,93 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
-      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
     <div id="container">
-      <div id="center">
-        <div id="myWallPhoto"></div>
-        <div id="myProfilePhoto">
-          <img src="./" />
-        </div>
-        <p id="name"></p>
-        <div class="myButtonBox">
-          <a href="" download>나의 로그 다운로드</a>
-        </div>
-        <div class="myButtonBox">
-          <form
-            name="photo"
-            method="post"
-            action="/myservice/database/myMember.php"
-            enctype="multipart/form-data"
-          >
-            <div class="photoBox">
-              <input
-                type="file"
-                name="myProfilePhoto"
-                class="photoSelectorBtn"
-              />
+        <div id="center">
+            <div id="myWallPhoto"></div>
+            <div id="myProfilePhoto">
+                <img src="./images/me/happyCat.png" alt="냥이" />
             </div>
-            <input type="hidden" name="mode" value="photo" />
-            <div class="photoBox">
-              <input
-                type="submit"
-                id="myProfilePhotoUploadBtn"
-                value="프로필 사진 변경"
-              />
+            <p id="name">이미경</p>
+            <div class="myButtonBox">
+                <a href="./log/memberLogs/myLog_1111.txt" download>나의 로그 다운로드</a>
             </div>
-          </form>
-        </div>
-        <div class="myButtonBox">
-          <form
-            name="photo"
-            method="post"
-            action="/myservice/database/myMember.php"
-            enctype="multipart/form-data"
-          >
-            <div class="photoBox">
-              <input type="file" name="myCoverPhoto" class="photoSelectorBtn" />
+            <div class="myButtonBox">
+                <form name="photo" method="post" action="/myservice/database/myMember.php" enctype="multipart/form-data">
+                    <div class="photoBox">
+                        <input type="file" name="myProfilePhoto" class="photoSelectorBtn" />
+                    </div>
+                    <input type="hidden" name="mode" value="photo" />
+                    <div class="photoBox">
+                        <input type="submit" id="myProfilePhotoUploadBtn" value="프로필 사진 변경" />
+                    </div>
+                </form>
             </div>
-            <input type="hidden" name="mode" value="photo" />
-            <div class="photoBox">
-              <input
-                type="submit"
-                id="myCoverPhotoUploadBtn"
-                value="커버 사진 변경"
-              />
+            <div class="myButtonBox">
+                <form name="photo" method="post" action="/myservice/database/myMember.php" enctype="multipart/form-data">
+                    <div class="photoBox">
+                        <input type="file" name="myCoverPhoto" class="photoSelectorBtn" />
+                    </div>
+                    <input type="hidden" name="mode" value="photo" />
+                    <div class="photoBox">
+                        <input type="submit" id="myCoverPhotoUploadBtn" value="커버 사진 변경" />
+                    </div>
+                </form>
             </div>
-          </form>
-        </div>
-        <div id="myContent">
-          <!-- timeline -->
-          <div id="writing">
-            <div class="me">
-              <img src="" />
-              <p></p>
-            </div>
-            <textarea maxlength="500" id="meContent"></textarea>
-            <div id="inputBox">
-              <input type="button" id="mePostBtn" value="게시" />
-            </div>
-          </div>
+            <div id="myContent">
+                <!-- timeline -->
+                <div id="writing">
+                    <div class="me">
+                        <img src="./images/me/happyCat.png" />
+                        <p>이미경</p>
+                    </div>
+                    <textarea maxlength="500" id="meContent"></textarea>
+                    <div id="inputBox">
+                        <input type="button" id="mePostBtn" value="게시" />
+                    </div>
+                </div>
 
-          <div class="reading">
-            <div class="writerArea">
-              <img src="/>
-              <div class="writingInfo">
-                <p></p>
-                <div class="writingDate"></div>
-              </div>
-            </div>
-            <span class="content"></span>
-            <div class="likeArea">
-              <div class="likeNum likes" style="">공감 수:</div>
-              <div class="likeBtn" id="likes">공감하기</div>
-              <div class="contentsID"></div>
-            </div>
-            <div class="myCommentArea myCommentArea<?=$mc['contentsID']?>">
-              <div class="commentBox">
-                <img src="" />
-                <p class="commentRegTime"></p>
-                <p class="commentPoster"></p>
-                <p class="writtenComment"></p>
-              </div>
-            </div>
-            <div class="inputBox">
-              <img src="" />
-              <input
-                type="text"
-                class="inputComment comments"
-                placeholder="코멘트 입력"
-              />
-              <div class="regCommentBox">
-                <input type="button" class="regCommentBtn" id="" value="게시" />
-              </div>
-            </div>
-          </div>
+                <div class="reading">
+                    <div class="writerArea">
+                        <img src="./images/me/happyCat.png" />
+                        <div class="writingInfo">
+                            <p>이미경</p>
+                            <div class="writingDate">2030. 12. 25</div>
+                        </div>
+                    </div>
+                    <span class="content"></span>
+                    <div class="likeArea">
+                        <div class="likeNum likes" style="background: #fff">공감 수: 250</div>
+                        <div class="likeBtn" id="likes861225">공감하기</div>
+                        <div class="contentsID">콘텐츠번호 : 861225</div>
+                    </div>
+                    <div class="myCommentArea myCommentArea861225">
+                        <div class="commentBox">
+                            <img src="./images/me/happyCat.png" />
+                            <p class="commentRegTime">2030. 12. 25</p>
+                            <p class="commentPoster">이미경</p>
+                            <p class="writtenComment">반가워</p>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <img src="./images/me/happyCat.png" />
+                        <input type="text" class="inputComment comments861225" placeholder="코멘트 입력" />
+                        <div class="regCommentBox">
+                            <input type="button" class="regCommentBtn" id="comments861225" value="게시" />
+                        </div>
+                    </div>
+                </div>
 
-          <!-- end of timeline -->
+                <!-- end of timeline -->
+            </div>
+            <input type="hidden" name="page" id="page" value="1" />
         </div>
-        <input type="hidden" name="page" id="page" value="" />
-      </div>
-      <div id="noContents">더 이상 콘텐츠가 없습니다.</div>
+        <div id="noContents">더 이상 콘텐츠가 없습니다.</div>
     </div>
-  </body>
+</body>
+
 </html>
